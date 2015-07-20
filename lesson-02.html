@@ -62,6 +62,7 @@
 						<li>NPM</li>
 						<li>Gulp</li>
 						<li>WP-CLI</li>
+						<li>_s</li>
 					</ul>
 
 				</section>
@@ -70,7 +71,7 @@
 
 					<section>
 
-						<h2>Git</h2>
+						<h2><a href="https://git-scm.com/">Git</a></h2>
 
 						<ul>
 							<li>Come on, it's 2015!</li>
@@ -98,9 +99,26 @@
 
 				<section>
 
-					<h2>Vagrant</h2>
+					<section>
 
-					<p>Virtualized development environment.</p>
+						<h2><a href="https://www.vagrantup.com/">Vagrant</a></h2>
+
+						<p>Virtualized development environment…</p>
+
+						<p class="fragment">…a computer inside a computer.</p>
+
+					</section>
+
+					<section>
+
+						<h3>Why use Vagrant?</h3>
+
+						<ul>
+							<li class="fragment">Can be configured with code.</li>
+							<li class="fragment">Allows for closer match with the production environment.</li>
+							<li class="fragment">Environments can be created and destroyed at will.</li>
+						</ul>
+					</section>
 
 				</section>
 
@@ -113,7 +131,7 @@
 					<pre><code data-trim>{
   "name": "rp3agency-website",
   "title": "RP3 Agency Website",
-  "url": "rp3.io",
+  "url": "https://rp3agency.com",
   "contributors": [
     {
       "name": "Tracy Rotton",
@@ -126,37 +144,53 @@
   ]
 }</code></pre>
 
+<p><small><i>package.json</i></small></p>
+
 				</section>
 
 				<section>
-					<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">bower install npm install brew install yum&#10;&#10;Wait, that’s wrong…I always forget which order the package managers are supposed to be in.</p>&mdash; I Am Devloper (@iamdevloper) <a href="https://twitter.com/iamdevloper/status/467334875876704256">May 16, 2014</a></blockquote>
-					<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+					<section>
+						<h2>Package Managers</h2>
+
+						<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">bower install npm install brew install yum&#10;&#10;Wait, that’s wrong…I always forget which order the package managers are supposed to be in.</p>&mdash; I Am Devloper (@iamdevloper) <a href="https://twitter.com/iamdevloper/status/467334875876704256">May 16, 2014</a></blockquote>
+						<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</section>
+
+					<section>
+						<h2>Package Managers</h2>
+
+						<p class="fragment">Automates the process of installing, updating, and removing software.</p>
+
+						<p class="fragment">Retrieves code from a central repository.</p>
+					</section>
+
+					<section>
+						<h3><a href="https://getcomposer.org/">Composer</a></h3>
+
+						<img src="images/logo-composer-transparent4.png" style="width:20vw;display:block;margin:0 auto">
+
+						<ul>
+							<li class="fragment">Package manager for PHP</li>
+							<li class="fragment">Can be used to manage WordPress core and plugins</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3><a href="https://www.npmjs.com/">NPM</a></h3>
+
+						<img src="images/npm-logo.svg" style="width:20vw;display:block;margin:0 auto">
+
+						<ul>
+							<li class="fragment">Node Package Manager</li>
+							<li class="fragment">Means to an end</li>
+						</ul>
+					</section>
+
 				</section>
 
 				<section>
-					<h3>Composer</h3>
-
-					<img src="images/logo-composer-transparent4.png" style="width:20vw;display:block;margin:0 auto">
-
-					<ul>
-						<li class="fragment">Package manager for PHP</li>
-						<li class="fragment">Can be used to manage WordPress core and plugins</li>
-					</ul>
-				</section>
-
-				<section>
-					<h3>NPM</h3>
-
-					<img src="images/npm-logo.svg" style="width:20vw;display:block;margin:0 auto">
-
-					<ul>
-						<li class="fragment">Node Package Manager</li>
-						<li class="fragment">Means to an end</li>
-					</ul>
-				</section>
-
-				<section>
-					<h3>Gulp.js</h3>
+					<h3><a href="gulpjs.com">Gulp.js</a></h3>
 
 					<img src="images/gulp.png" style="height:20vw;display:block;margin:0 auto">
 
@@ -168,12 +202,22 @@
 				</section>
 
 				<section>
-					<h3>WP-CLI</h3>
+					<h3><a href="http://wp-cli.org">WP-CLI</a></h3>
 
 					<ul>
 						<li class="fragment">Provides a command-line alternative to managing WordPress</li>
 						<li class="fragment">Faster than /wp-admin/</li>
 						<li class="fragment">Scripting!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3><a href="http://underscores.me">_s</a></h3>
+
+					<ul>
+						<li class="fragment">Pronounced "underscores"</li>
+						<li class="fragment">"Starter" theme</li>
+						<li class="fragment">Provides base templates, functions, and classes upon which to build a custom theme.</li>
 					</ul>
 				</section>
 
@@ -213,6 +257,12 @@
 						<p>Exports your database as a MySQL data dump, does a find and replace on URLs and file paths, then allows you to save it to your computer.</p>
 					</section>
 
+					<section>
+						<h3><a href="https://wordpress.org/plugins/wordpress-importer/">WordPress Importer</a></h3>
+
+						<p>Allows you to import an XML file, such as the Theme Unit Test data.</p>
+					</section>
+
 				</section>
 
 				<section>
@@ -248,22 +298,55 @@
 
 					<section>
 						<h3>Vagrant Up!</h3>
+
+						<p><code>vagrant up</code></p>
 					</section>
 
 					<section>
 						<h3>SSH</h3>
+
+						<p><code>vagrant ssh</code></p>
 					</section>
 
 					<section>
 						<h3>Install Composer Packages (Plugins)</h3>
+
+						<p><code>composer install</code></p>
 					</section>
 
 					<section>
 						<h3>Install Node Modules</h3>
+
+						<p><code>npm install</code></p>
 					</section>
 
 					<section>
-						<h3>
+						<h3>Activate Our Plugins</h3>
+
+						<p><code>wp plugin activate --all</code></p>
+					</section>
+
+					<section>
+						<h3>Install Our Starter Theme</h3>
+
+						<p><code>wp scaffold _s [theme-slug] --theme_name="[theme-name]" --author="[You]" --author_uri="[Your Website]" --sassify</code></p>
+					</section>
+
+					<section>
+						<h3>Activate Our Theme</h3>
+
+						<p><code>wp theme activate [theme-name]</code></p>
+					</section>
+
+					<section>
+						<h3>Import Theme Unit Test</h3>
+
+						<p><code>wp import ../../theme-unit-test-data.xml --authors=skip</code></p>
+					</section>
+
+					<section>
+						<h3>Customize wp-config.php</h3>
+					</section>
 
 				</section>
 
