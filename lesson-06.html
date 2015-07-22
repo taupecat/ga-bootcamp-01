@@ -51,6 +51,9 @@
 				</section>
 
 				<section>
+
+					<h3>Two Areas of Security</h3>
+
 					<ul>
 						<li class="fragment">User Security</li>
 						<li class="fragment">Developer Security</li>
@@ -110,7 +113,7 @@
 					<section>
 						<h3>Choose Secure Passwords</h3>
 
-						<p>Use a password manager like 1Password or LastPass.</p>
+						<p>Use a password manager like <a href="https://agilebits.com/onepassword">1Password</a> or <a href="https://lastpass.com/">LastPass</a>.</p>
 					</section>
 
 				</section>
@@ -148,6 +151,94 @@
 					<section>
 						<img src="images/trust-no-one.jpg">
 					</section>
+
+				</section>
+
+				<section>
+					<h2>Validation</h2>
+
+					<p>Ensures that input is secure before using it in your code.</p>
+				</section>
+
+				<section>
+
+					<section>
+
+						<h3>Whitelisting</h3>
+
+						<p>What if we had a very narrow set of valid responses?</p>
+
+						<pre><code>function ga_validate_yes_no( $some_input ) {
+    if ( in_array( $some_input, array( 'yes', 'no' ), true ) ) {
+        return $some_input;
+    }
+}</code></pre>
+
+					</section>
+
+					<section>
+						<h3>Whitelisting</h3>
+
+						<p>Be sure to use strict type checking.</p>
+
+						<pre><code>// will evaluate to integer 1 during loose comparisons
+$untrusted_input = '1 malicious string';
+
+// == would have evaluated to true, but === evaluates to false
+if ( 1 === $untrusted_input ) {
+	echo '&lt;p>Valid data&lt;/p>';
+} else {
+	wp_die( 'Invalid data' );
+}</code></pre>
+
+					</section>
+
+				</section>
+
+				<section>
+					<h3>PHP Validation Functions</h3>
+
+					<ul>
+						<li><code>is_bool()</code></li>
+						<li><code>is_float()</code></li>
+						<li><code>is_int()</code></li>
+						<li><code>is_numeric()</code></li>
+						<li><code>is_string()</code></li>
+					</ul>
+				</section>
+
+				<section>
+
+					<h2>Sanitization</h2>
+
+					<p>Removes the elements we don't want from data.</p>
+				</section>
+
+				<section>
+
+					<h3>WordPress Sanitization Functions</h3>
+
+					<ul>
+						<li><code>sanitize_text_field()</code></li>
+						<li><code>absint()</code></li>
+						<li><code>esc_url_raw()</code></li>
+						<li><code>sanitize_email()</code></li>
+						<li><code>sanitize_file_name()</code></li>
+						<li><code>sanitize_key()</code></li>
+						<li><code>sanitize_title()</code></li>
+					</ul>
+				</section>
+
+				<section>
+
+					<h3>Escaping</h3>
+
+					<ul>
+						<li><code>esc_html()</code></li>
+						<li><code>esc_url()</code></li>
+						<li><code>esc_js()</code></li>
+						<li><code>esc_attr()</code></li>
+					</ul>
 
 				</section>
 
