@@ -116,8 +116,11 @@
 						<ul>
 							<li class="fragment">Can be configured with code.</li>
 							<li class="fragment">Allows for closer match with the production environment.</li>
-							<li class="fragment">Environments can be created and destroyed at will.</li>
+							<li class="fragment">Environments can be created and destroyed at will:</li>
 						</ul>
+
+						<p class="fragment">You can <code>vagrant destroy</code>,<br>
+						<span class="fragment">but you can never <code>vagrant forget</code>.</span></p>
 					</section>
 
 				</section>
@@ -296,13 +299,13 @@
 					<section>
 						<h3>Get the Archive</h3>
 
-						<code>git clone https://github.com/taupecat/VVV.git</code>
+						<code>git&nbsp;clone&nbsp;https://github.com/taupecat/VVV.git</code>
 					</section>
 
 					<section>
 						<h3>Vagrant Up!</h3>
 
-						<p><code>vagrant up</code></p>
+						<p><code>cd VVV<br/>vagrant up</code></p>
 					</section>
 
 					<section>
@@ -314,7 +317,7 @@
 					<section>
 						<h3>Install Composer Packages (Plugins)</h3>
 
-						<p><code>composer install</code></p>
+						<p><code>cd /vagrant<br/>composer install</code></p>
 					</section>
 
 					<section>
@@ -326,25 +329,25 @@
 					<section>
 						<h3>Activate Our Plugins</h3>
 
-						<p><code>wp plugin activate --all</code></p>
+						<p><code>cd www/wordpress-default<br/>wp plugin activate --all</code></p>
 					</section>
 
 					<section>
 						<h3>Install Our Starter Theme</h3>
 
-						<p><code>wp scaffold _s [theme-slug] --sassify</code></p>
+						<p><code>wp&nbsp;scaffold&nbsp;_s&nbsp;[theme-slug]&nbsp;\<br/>--theme_name="[Theme&nbsp;Name]"&nbsp;--sassify</code></p>
 					</section>
 
 					<section>
 						<h3>Activate Our Theme</h3>
 
-						<p><code>wp theme activate [theme-name]</code></p>
+						<p><code>wp&nbsp;theme&nbsp;activate&nbsp;[theme-name]</code></p>
 					</section>
 
 					<section>
 						<h3>Import Theme Unit Test</h3>
 
-						<p><code>wp import ../../theme-unit-test-data.xml --authors=skip</code></p>
+						<p><code><small>wp&nbsp;import&nbsp;../../theme-unit-test-data.xml&nbsp;--authors=skip</small></code></p>
 					</section>
 
 					<section>
